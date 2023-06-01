@@ -1,9 +1,14 @@
-from tkinter import *
+
+import json
 import pyttsx3
 import time
 from carbonfootprint import get_response
+from tkinter import *
 from tkinter.filedialog import asksaveasfilename
-import tkinter.messagebox
+from tkinter import messagebox
+from tkinter import simpledialog
+from tkinter import scrolledtext
+
 import threading
 
 
@@ -22,7 +27,9 @@ GRAY="#4f4f4f"
 VERYDARKGRAY = "#212121"
 BLACK = "#000000"
 class ChatInterface(Frame):
-
+    """
+    Draw the chat interface where user can chat with the bot
+    """
     def __init__(self, master=None):
         Frame.__init__(self, master)
         self.master = master
@@ -43,6 +50,7 @@ class ChatInterface(Frame):
 
         options = Menu(self.menu, tearoff=0)
         self.menu.add_cascade(label="Options", menu=options)
+        options.add_command(label="Speaker Settings", command=self.edit_response_settings)
 
         font = Menu(options, tearoff=0)
         options.add_cascade(label="Font", menu=font)
@@ -91,10 +99,68 @@ class ChatInterface(Frame):
                                   activeforeground=BLACK)
         self.send_button.pack(side=LEFT, ipady=8)
         self.master.bind("<Return>", self.send_message_insert)
-
+        self.default_speaker_values()
         self.last_sent_label(date="No messages sent.")
         self.color_theme_default()
+    def default_speaker_values(self):
+        self.speaker = pyttsx3.init()
+        voices = self.speaker.getProperty('voices')  
+        self.speaker.setProperty('rate', 200)
+        self.speaker.setProperty('volume', 100)
+        self.speaker.setProperty('voices',voices[0].id)
+
+    def edit_response_settings(self):
+        # Create a new top-level window for editing settings
+        self.settings_window = Toplevel(self.master)
+        self.settings_window.title("Edit Settings")
         
+        # Create labels and entry fields for the settings
+        label_speed = Label(self.settings_window, text="Speed:")
+        entry_speed = Entry(self.settings_window)
+        label_volume = Label(self.settings_window, text="Volume:")
+        entry_volume = Entry(self.settings_window)
+        
+        # Create a label and radio buttons for selecting the speaker gender
+        label_speaker = Label(self.settings_window, text="Speaker Gender:")
+        speaker_var = IntVar(value=0)
+        radio_male = Radiobutton(self.settings_window, text="Male", variable=speaker_var, value=0)
+        radio_female = Radiobutton(self.settings_window, text="Female", variable=speaker_var, value=1)
+        
+        # Set the default values for the settings
+        entry_speed.insert(0, "200")
+        entry_volume.insert(0, "100")
+        
+        # Grid layout for the labels, entry fields, and radio buttons
+        label_speed.grid(row=0, column=0, sticky="e")
+        entry_speed.grid(row=0, column=1, padx=10)
+        label_volume.grid(row=1, column=0, sticky="e")
+        entry_volume.grid(row=1, column=1, padx=10)
+        label_speaker.grid(row=2, column=0, sticky="e")
+        radio_male.grid(row=2, column=1, sticky="w")
+        radio_female.grid(row=2, column=1, sticky="e")
+        
+        # Create a button to save the settings
+        save_button = Button(self.settings_window, text="Save", command=lambda: self.save_response_settings(entry_speed.get(), entry_volume.get(), speaker_var.get()))
+        save_button.grid(row=3, column=1, pady=10)
+            
+    def save_response_settings(self, speed, volume, speaker_gender):
+        # Convert the speed and volume to integers
+        speed = int(speed)
+        volume = int(volume)
+        
+        # Set the properties for the speaker
+        self.speaker.setProperty('rate', speed)
+        self.speaker.setProperty('volume', volume)
+        
+        # Select the appropriate voice based on the speaker gender
+        voices = self.speaker.getProperty('voices')
+        voice_id = voices[0].id if speaker_gender == 0 else voices[1].id
+        self.speaker.setProperty('voice', voice_id)
+        
+        # Close the settings window
+        self.settings_window.destroy()
+
+
     def save_chat(self):
         file_path = asksaveasfilename()
         if file_path:
@@ -102,18 +168,14 @@ class ChatInterface(Frame):
             try:
                 with open(file_path,"w") as file:
                     file.write(chat_history)
-                    tkinter.messagebox.showinfo(title="Success!",message=f"Chat history was saved in {file_path}")
+                    messagebox.showinfo(title="Success!",message=f"Chat history was saved in {file_path}")
             except Exception as e:
-                tkinter.messagebox.showerror("Something went wrong!",str(e))
-        else: tkinter.messagebox.showerror(title="Failed!",message=f"Did not receive where to save")
+                messagebox.showerror("Something went wrong!",str(e))
+        else: messagebox.showerror(title="Failed!",message=f"Did not receive where to save")
 
     def playresponse(self, response):
-        speaker = pyttsx3.init()
-
-        speaker.setProperty('rate', 200)
-        speaker.setProperty('volume', 100)
-        speaker.say(response)
-        speaker.runAndWait()
+        self.speaker.say(response)
+        self.speaker.runAndWait()
 
     def last_sent_label(self, date):
 
@@ -136,10 +198,37 @@ class ChatInterface(Frame):
         exit()
 
     def msg(self):
-        tkinter.messagebox.showinfo("Carbon Footprint Assistant v1.0",
+        messagebox.showinfo("Carbon Footprint Assistant v1.0",
                                     "I specialize in carbon footprint reduction strategies, eco-friendly practices, sustainable living, and environmental conservation. I can offer guidance on these topics to help you make a positive impact on the environment.")
+
     def about(self):
-        tkinter.messagebox.showinfo("Train me","Coming soon!")
+        acknowledgment = "I understand that any info added here cannot be deleted or modified. "
+
+        user_acknowledged = simpledialog.askstring("Type Confirm to acknowledge.", acknowledgment)
+
+        if user_acknowledged == "Confirm":
+            # Training screen
+            keywords = simpledialog.askstring("Enter Keywords", "Enter the keywords (separated by commas):")
+            response = simpledialog.askstring("Enter Response", "Enter the bot's response:")
+
+            # Save the data as a JSON object
+            new_data = {
+                "type": "question",
+                "keywords": [kw.strip() for kw in keywords.split(",")],
+                "response": response.strip()
+            }
+
+            with open("data.json", "r+") as file:
+                current_data = json.load(file)
+                current_data.append(new_data)
+                file.seek(0)
+                json.dump(current_data, file, indent=4)
+                file.truncate() 
+
+            messagebox.showinfo("Confirmation", "Training data saved successfully!")
+        else:
+            messagebox.showerror("Error", "Please acknowledge the terms before proceeding.")
+
 
     def send_message_insert(self, message):
         user_input = self.entry_field.get()
