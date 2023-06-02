@@ -2,3 +2,6 @@
 /__pycache__
 /scripts.js
 /styles.css
+/build
+/dist
+/main.spec
