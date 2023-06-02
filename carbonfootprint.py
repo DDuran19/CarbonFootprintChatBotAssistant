@@ -83,7 +83,7 @@ def get_score(keywords: list, user_input: str) -> float:
     return score
 
 def get_response(string_input: str) -> str:
-    TOLERANCE = 0.2
+    TOLERANCE = 0.1
     user_input = _clean(string_input)
     if user_input =="":
         return "Im right here, just let me know when you need me." 
