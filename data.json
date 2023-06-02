@@ -5457,6 +5457,9 @@
     {
         "type": "greetings",
         "keywords": [
+            "hey",
+            "hi",
+            "hello there",
             "hello"
         ],
         "response": "Hello! I'm here to help you reduce your carbon footprint and make a positive impact on the environment. How can I assist you today?"
@@ -5464,35 +5467,56 @@
     {
         "type": "greetings",
         "keywords": [
-            "hi"
+            "hey",
+            "hi",
+            "hello there",
+            "hello"
         ],
         "response": "Hi there! As an environmental expert, I'm passionate about helping you reduce your carbon footprint. What can I do for you?"
     },
     {
         "type": "greetings",
         "keywords": [
-            "how are you"
+            "how are you",
+            "how is your day",
+            "how are you doing",
+            "whats up"
         ],
         "response": "I'm doing well, thank you! I'm always eager to help individuals like you make a difference for the environment. How can I assist you with your carbon footprint?"
     },
     {
         "type": "greetings",
         "keywords": [
-            "hey"
+            "how are you",
+            "how is your day",
+            "how are you doing",
+            "whats up"
+        ],
+        "response": "I'm feeling great, thank you! I'm always excited to assist individuals like yourself in making a positive impact on the environment. How may I be of help in reducing your carbon footprint?"    },
+    {
+        "type": "greetings",
+        "keywords": [
+            "hey",
+            "hi",
+            "hello there",
+            "hello"
         ],
         "response": "Hey! It's great to connect with someone who shares my concern for the environment. How can I support you in reducing your carbon footprint?"
     },
     {
         "type": "greetings",
         "keywords": [
-            "good morning"
+            "good morning",
+            "good am",
+            "good mornin"
         ],
         "response": "Good morning! I hope you're ready to take some eco-friendly actions today. How can I help you make a positive impact on the environment?"
     },
     {
         "type": "greetings",
         "keywords": [
-            "good afternoon"
+            "good afternoon",
+            "good pm"
         ],
         "response": "Good afternoon! I'm here to provide you with expert advice on reducing your carbon footprint. What environmental challenges are you facing?"
     },
@@ -5506,20 +5530,28 @@
     {
         "type": "greetings",
         "keywords": [
-            "nice to meet you"
+            "nice to meet you",
+            "pleased to meet you",
+            "great to see you"
         ],
         "response": "Nice to meet you too! I'm an expert in carbon footprint reduction and environmental sustainability. How can I help you make a positive impact?"
     },
     {
         "type": "greetings",
         "keywords": [
-            "pleased to meet you"
+            "nice to meet you",
+            "pleased to meet you",
+            "great to see you",
+            "good to see you"
         ],
         "response": "Pleased to meet you as well! I'm dedicated to helping individuals like you make eco-conscious decisions. How can I assist you in reducing your carbon footprint?"
     },
     {
         "type": "greetings",
         "keywords": [
+            "nice to meet you",
+            "pleased to meet you",
+            "great to see you",
             "good to see you"
         ],
         "response": "Good to see you too! As an environmental advocate, I'm here to support you in your journey towards a greener lifestyle. How can I be of assistance?"
@@ -5527,7 +5559,10 @@
     {
         "type": "greetings",
         "keywords": [
-            "hello there"
+            "hey",
+            "hi",
+            "hello there",
+            "hello"
         ],
         "response": "Hello there! It's great to connect with someone who cares about the environment. How can I help you reduce your carbon footprint?"
     },
@@ -5541,14 +5576,18 @@
     {
         "type": "greetings",
         "keywords": [
-            "what can you do"
+            "what can you do",
+            "why are you here"
         ],
         "response": "I'm here to support you in your efforts to reduce your carbon footprint and protect the environment. Let's discuss how we can make a positive impact together!"
     },
     {
         "type": "greetings",
         "keywords": [
-            "how are you"
+            "how are you",
+            "are you okay",
+            "are you ok",
+            "are you good"
         ],
         "response": "I'm doing well, thank you! I'm passionate about environmental sustainability and eager to assist you in your carbon footprint reduction journey. How can I help you?"
     },
@@ -5562,7 +5601,10 @@
     {
         "type": "greetings",
         "keywords": [
-            "hey there"
+            "hey",
+            "hi",
+            "hello there",
+            "hello"
         ],
         "response": "Hey there! It's great to connect with someone who shares my commitment to the environment. How can I support you in reducing your carbon footprint?"
     },
@@ -5590,7 +5632,7 @@
     {
         "type": "greetings",
         "keywords": [
-            "hey, what's up"
+            "hey whats up"
         ],
         "response": "Hey! I'm here to talk about reducing your carbon footprint and creating a sustainable future. What can I do to support you?"
     },
@@ -6184,248 +6226,301 @@
         "type": "greeting",
         "keywords": [
             "thank",
-            "you"
+            "thanks",
+            "thank you",
+            "ty"
         ],
-        "response": "You're welcome! I'm here to help you with any questions or concerns you have about carbon footprint and the environment. Feel free to ask!"
+        "response": "Sure thing! I'm here to help you with any questions or concerns you have about carbon footprint and the environment. Feel free to ask!"
     },
     {
         "type": "greeting",
         "keywords": [
             "thanks"
         ],
-        "response": "You're welcome! It's my pleasure to assist you in any way I can. If you have any more questions about carbon footprint and its impact on the environment, feel free to ask!"
+        "response": "I got you! It's my pleasure to assist you in any way I can. If you have any more questions about carbon footprint and its impact on the environment, feel free to ask!"
     },
     {
         "type": "greeting",
         "keywords": [
             "thank",
-            "you",
+            "thanks",
+            "thank you",
+            "ty",
             "help"
         ],
-        "response": "You're welcome! I'm glad I could be of help. If there's anything else you'd like to know about carbon footprint and how to make a positive environmental impact, just let me know!"
+        "response": "No problem! I'm glad I could be of help. If there's anything else you'd like to know about carbon footprint and how to make a positive environmental impact, just let me know!"
     },
     {
         "type": "greeting",
         "keywords": [
             "thank",
-            "you",
-            "information"
+            "thanks",
+            "thank you",
+            "ty"
         ],
-        "response": "You're welcome! I'm happy to provide you with the information you need. If there's anything else you'd like to learn about carbon footprint and sustainability, feel free to ask!"
-    },
-    {
-        "type": "greeting",
-        "keywords": [
-            "thank"
-        ],
-        "response": "You're welcome! If there's anything else you'd like to discuss or if you have more questions about carbon footprint and its effects on the environment, feel free to ask."
+        "response": "No problem! I'm happy to provide you with the information you need. If there's anything else you'd like to learn about carbon footprint and sustainability, feel free to ask!"
     },
     {
         "type": "greeting",
         "keywords": [
             "thank",
-            "you",
-            "assistance"
+            "thanks",
+            "thank you",
+            "ty"
         ],
-        "response": "You're welcome! I'm here to assist you. If there's anything else you'd like to know about carbon footprint and how to reduce your environmental impact, feel free to ask!"
+        "response": "No problem! If there's anything else you'd like to discuss or if you have more questions about carbon footprint and its effects on the environment, feel free to ask."
     },
     {
         "type": "greeting",
         "keywords": [
             "thank",
-            "you",
+            "thanks",
+            "thank you",
+            "ty"
+        ],
+        "response": "My pleasure! I'm here to assist you. If there's anything else you'd like to know about carbon footprint and how to reduce your environmental impact, feel free to ask!"
+    },
+    {
+        "type": "greeting",
+        "keywords": [
+            "thank",
+            "thanks",
+            "thank you",
+            "ty",
             "expertise"
         ],
-        "response": "You're welcome! I'm glad I could provide you with my expertise on carbon footprint and environmental sustainability. If you have any more questions or need further assistance, don't hesitate to ask!"
+        "response": "My pleasure! I'm glad I could provide you with my expertise on carbon footprint and environmental sustainability. If you have any more questions or need further assistance, don't hesitate to ask!"
     },
     {
         "type": "greeting",
         "keywords": [
             "thank",
-            "you",
+            "thanks",
+            "thank you",
+            "ty",
             "advice"
         ],
-        "response": "You're welcome! I'm here to offer advice and guidance on carbon footprint and sustainable practices. If you need any more information or have additional questions, feel free to reach out!"
+        "response": "My pleasure! I'm here to offer advice and guidance on carbon footprint and sustainable practices. If you need any more information or have additional questions, feel free to reach out!"
     },
     {
         "type": "greeting",
         "keywords": [
             "thank",
-            "you",
+            "thanks",
+            "thank you",
+            "ty",
             "support"
         ],
-        "response": "You're welcome! I'm happy to support you in your journey towards understanding and reducing your carbon footprint. If you need any further support or have more questions, feel free to ask!"
+        "response": "All for you! I'm happy to support you in your journey towards understanding and reducing your carbon footprint. If you need any further support or have more questions, feel free to ask!"
     },
     {
         "type": "greeting",
         "keywords": [
             "thank",
-            "you",
+            "thanks",
+            "thank you",
+            "ty",
             "insight"
         ],
-        "response": "You're welcome! I'm glad I could provide you with valuable insights into carbon footprint and its impact on the environment. If you have any more questions or need further clarification, feel free to ask!"
+        "response": "All for you! I'm glad I could provide you with valuable insights into carbon footprint and its impact on the environment. If you have any more questions or need further clarification, feel free to ask!"
     },
     {
         "type": "greeting",
         "keywords": [
             "thank",
-            "you",
+            "thanks",
+            "thank you",
+            "ty",
             "knowledge"
         ],
-        "response": "You're welcome! I'm here to share my knowledge on carbon footprint and environmental sustainability. If there's anything else you'd like to know or discuss, feel free to reach out!"
+        "response": "All for you! I'm here to share my knowledge on carbon footprint and environmental sustainability. If there's anything else you'd like to know or discuss, feel free to reach out!"
     },
     {
         "type": "greeting",
         "keywords": [
             "thank",
-            "you",
+            "thanks",
+            "thank you",
+            "ty",
             "concerns"
         ],
-        "response": "You're welcome! I understand your concerns about carbon footprint and the environment, and I'm here to address them. If you have any more questions or need further assistance, don't hesitate to ask!"
+        "response": "All for you! I understand your concerns about carbon footprint and the environment, and I'm here to address them. If you have any more questions or need further assistance, don't hesitate to ask!"
     },
     {
         "type": "greeting",
         "keywords": [
             "thank",
-            "you",
+            "thanks",
+            "thank you",
+            "ty",
             "curiosity"
         ],
-        "response": "You're welcome! I appreciate your curiosity about carbon footprint and its implications. If there's anything else you'd like to explore or learn more about, feel free to ask!"
+        "response": "Don't mention it! I appreciate your curiosity about carbon footprint and its implications. If there's anything else you'd like to explore or learn more about, feel free to ask!"
     },
     {
         "type": "greeting",
         "keywords": [
             "thank",
-            "you",
+            "thanks",
+            "thank you",
+            "ty",
             "environment"
         ],
-        "response": "You're welcome! I'm dedicated to protecting the environment, and I'm glad I could assist you with your questions about carbon footprint. If there's anything else you'd like to know, just let me know!"
+        "response": "Don't mention it! I'm dedicated to protecting the environment, and I'm glad I could assist you with your questions about carbon footprint. If there's anything else you'd like to know, just let me know!"
     },
     {
         "type": "greeting",
         "keywords": [
             "thank",
-            "you",
+            "thanks",
+            "thank you",
+            "ty",
             "supportive"
         ],
-        "response": "You're welcome! I'm here to provide a supportive environment for your inquiries about carbon footprint and sustainability. If you have more questions or need additional support, feel free to ask!"
+        "response": "Don't mention it! I'm here to provide a supportive environment for your inquiries about carbon footprint and sustainability. If you have more questions or need additional support, feel free to ask!"
     },
     {
         "type": "greeting",
         "keywords": [
             "thank",
-            "you",
+            "thanks",
+            "thank you",
+            "ty",
             "awareness"
         ],
-        "response": "You're welcome! I'm glad I could raise awareness about carbon footprint and its impact on the environment. If there's anything else you'd like to discuss or if you have more questions, feel free to ask!"
+        "response": "Don't mention it! I'm glad I could raise awareness about carbon footprint and its impact on the environment. If there's anything else you'd like to discuss or if you have more questions, feel free to ask!"
     },
     {
         "type": "greeting",
         "keywords": [
             "thank",
-            "you",
+            "thanks",
+            "thank you",
+            "ty",
             "commitment"
         ],
-        "response": "You're welcome! I appreciate your commitment to understanding carbon footprint and its effects. If you need any more information or have further inquiries, don't hesitate to reach out!"
+        "response": "No worries! I appreciate your commitment to understanding carbon footprint and its effects. If you need any more information or have further inquiries, don't hesitate to reach out!"
     },
     {
         "type": "greeting",
         "keywords": [
             "thank",
-            "you",
+            "thanks",
+            "thank you",
+            "ty",
             "engagement"
         ],
-        "response": "You're welcome! I'm glad to see your engagement with carbon footprint and environmental concerns. If there's anything else you'd like to discuss or learn more about, feel free to ask!"
+        "response": "No worries! I'm glad to see your engagement with carbon footprint and environmental concerns. If there's anything else you'd like to discuss or learn more about, feel free to ask!"
     },
     {
         "type": "greeting",
         "keywords": [
             "thank",
-            "you",
+            "thanks",
+            "thank you",
+            "ty",
             "questions"
         ],
-        "response": "You're welcome! I appreciate your questions about carbon footprint and its impact. I'm here to provide answers and guidance, so if you have more questions or need further clarification, feel free to ask!"
+        "response": "No worries! I appreciate your questions about carbon footprint and its impact. I'm here to provide answers and guidance, so if you have more questions or need further clarification, feel free to ask!"
     },
     {
         "type": "greeting",
         "keywords": [
             "thank",
-            "you",
+            "thanks",
+            "thank you",
+            "ty",
             "dedication"
         ],
-        "response": "You're welcome! I admire your dedication to learning about carbon footprint and making a positive environmental impact. If there's anything else you'd like to know or discuss, feel free to reach out!"
+        "response": "No worries! I admire your dedication to learning about carbon footprint and making a positive environmental impact. If there's anything else you'd like to know or discuss, feel free to reach out!"
     },
     {
         "type": "greeting",
         "keywords": [
             "thank",
-            "you",
+            "thanks",
+            "thank you",
+            "ty",
             "passion"
         ],
-        "response": "You're welcome! I share your passion for understanding carbon footprint and its implications. If there's anything specific you'd like to explore or any more questions you have, let me know!"
+        "response": "Not a problem! I share your passion for understanding carbon footprint and its implications. If there's anything specific you'd like to explore or any more questions you have, let me know!"
     },
     {
         "type": "greeting",
         "keywords": [
             "thank",
-            "you",
+            "thanks",
+            "thank you",
+            "ty",
             "initiative"
         ],
-        "response": "You're welcome! I appreciate your initiative in seeking information about carbon footprint and how to help the environment. If there's anything else you'd like to discuss or if you have more questions, feel free to ask!"
+        "response": "Not a problem! I appreciate your initiative in seeking information about carbon footprint and how to help the environment. If there's anything else you'd like to discuss or if you have more questions, feel free to ask!"
     },
     {
         "type": "greeting",
         "keywords": [
             "thank",
-            "you",
+            "thanks",
+            "thank you",
+            "ty",
             "aware"
         ],
-        "response": "You're welcome! I'm glad you're aware of the importance of carbon footprint and its impact on the environment. If there's anything specific you'd like to know or if you have more questions, feel free to ask!"
+        "response": "Not a problem! I'm glad you're aware of the importance of carbon footprint and its impact on the environment. If there's anything specific you'd like to know or if you have more questions, feel free to ask!"
     },
     {
         "type": "greeting",
         "keywords": [
             "thank",
-            "you",
+            "thanks",
+            "thank you",
+            "ty",
             "contribution"
         ],
-        "response": "You're welcome! I appreciate your contribution to the conversation around carbon footprint and sustainability. If there's anything else you'd like to contribute or if you have more questions, feel free to reach out!"
+        "response": "Not a problem! I appreciate your contribution to the conversation around carbon footprint and sustainability. If there's anything else you'd like to contribute or if you have more questions, feel free to reach out!"
     },
     {
         "type": "greeting",
         "keywords": [
             "thank",
-            "you",
+            "thanks",
+            "thank you",
+            "ty",
             "interest"
         ],
-        "response": "You're welcome! I'm glad to see your interest in carbon footprint and its effects on the environment. If there's anything else you'd like to know or if you have more questions, feel free to ask!"
+        "response": "Not a problem! I'm glad to see your interest in carbon footprint and its effects on the environment. If there's anything else you'd like to know or if you have more questions, feel free to ask!"
     },
     {
         "type": "greeting",
         "keywords": [
             "thank",
-            "you",
+            "thanks",
+            "thank you",
+            "ty",
             "inquiries"
         ],
-        "response": "You're welcome! I appreciate your inquiries about carbon footprint and sustainable practices. If there's anything else you'd like to inquire about or if you have more questions, feel free to reach out!"
+        "response": "Anytime! I appreciate your inquiries about carbon footprint and sustainable practices. If there's anything else you'd like to inquire about or if you have more questions, feel free to reach out!"
     },
     {
         "type": "greeting",
         "keywords": [
             "thank",
-            "you",
+            "thanks",
+            "thank you",
+            "ty",
             "initiative"
         ],
-        "response": "You're welcome! I admire your initiative in exploring carbon footprint and its environmental impact. If there's anything else you'd like to explore or discuss, feel free to ask!"
+        "response": "Anytime! I admire your initiative in exploring carbon footprint and its environmental impact. If there's anything else you'd like to explore or discuss, feel free to ask!"
     },
     {
         "type": "greeting",
         "keywords": [
             "thank",
-            "you",
+            "thanks",
+            "thank you",
+            "ty",
             "support"
         ],
-        "response": "You're welcome! I'm here to support you in your journey towards understanding and addressing carbon footprint. If you need any more information or have further questions, don't hesitate to ask!"
+        "response": "Sure thing! I'm here to support you in your journey towards understanding and addressing carbon footprint. If you need any more information or have further questions, don't hesitate to ask!"
     },
     {
         "type": "greeting",
