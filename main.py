@@ -7,7 +7,6 @@ from tkinter import *
 from tkinter.filedialog import asksaveasfilename
 from tkinter import messagebox
 from tkinter import simpledialog
-from tkinter import scrolledtext
 
 import threading
 
@@ -26,12 +25,16 @@ BRIGHTGREEN = "#33FF33"
 GRAY="#4f4f4f"
 VERYDARKGRAY = "#212121"
 BLACK = "#000000"
+HUMAN_BACKGROUND = LIGHTGRAY
+AI_BACKGROUND = WHITE
 class ChatInterface(Frame):
     """
     Draw the chat interface where user can chat with the bot
     """
     def __init__(self, master=None):
         Frame.__init__(self, master)
+        self.speaker_thread = None
+        self.event = threading.Event()
         self.master = master
         self.tl_bg = LIGHTGRAY
         self.tl_bg2 = LIGHTGRAY
@@ -173,7 +176,19 @@ class ChatInterface(Frame):
                 messagebox.showerror("Something went wrong!",str(e))
         else: messagebox.showerror(title="Failed!",message=f"Did not receive where to save")
 
+    def thread_handler(self,response):
+        if self.speaker_thread and self.speaker_thread.is_alive():
+            self.event.set()
+
+        self.event.clear()
+        self.speaker_thread = threading.Thread(target=self.playresponse, args=(response,),daemon=True)
+        self.speaker_thread.start()
+
     def playresponse(self, response):
+        try:
+            self.speaker.stop()
+        except:
+            pass
         self.speaker.say(response)
         self.speaker.runAndWait()
 
@@ -232,23 +247,32 @@ class ChatInterface(Frame):
 
     def send_message_insert(self, message):
         user_input = self.entry_field.get()
-        pr1 = "Human : " + user_input + "\n"
+        human_prompt = "Human: " + user_input + "\n"
         self.text_box.configure(state=NORMAL)
-        self.text_box.insert(END, pr1)
+        self.text_box.insert(END, human_prompt)
         self.text_box.configure(state=DISABLED)
         self.text_box.see(END)
 
         response = get_response(user_input)
-        response_string = "AI: " + response + "\n"
+        ai_response = "AI: " + response + "\n"
         self.text_box.configure(state=NORMAL)
-        self.text_box.insert(END, response_string)
+        self.text_box.insert(END, ai_response)
         self.text_box.configure(state=DISABLED)
         self.text_box.see(END)
         self.last_sent_label(str(time.strftime("Last message sent: " + '%B %d, %Y' + ' at ' + '%I:%M %p')))
         self.entry_field.delete(0, END)
-        time.sleep(0)
-        t2 = threading.Thread(target=self.playresponse, args=(response,))
-        t2.start()
+        # try:
+        #     if self.speaker_thread and self.speaker_thread.is_alive():
+        #         self.speaker_thread.speaker.endLoop()
+        #         self.speaker_thread.speaker.stop()
+        #         self.speaker_thread.join()
+                
+
+        #     self.speaker_thread = threading.Thread(target=self.playresponse, args=(response,),daemon=True)
+        #     self.speaker_thread.start()
+        # except RuntimeError:
+        #     pass
+        self.thread_handler(response)
         return response
 
     def font_change_default(self):
