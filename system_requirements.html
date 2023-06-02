@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .highlight {
+            background: #FF8C00;
+            color: black;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transform: translate(5px, -5px);
+            transition: transform 0.3s;
+            outline: 2px solid #e92001;
+            padding: 10px,
+    }
+    .fixed-header {
+            background: #FF8C00;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: top 0.3s;
+            border-radius: 15px;
+
+        }
+
+        .fixed-header.slide-up {
+            top: -20px;
+        }
+        .container {
+        background: linear-gradient(to bottom, #2F80ED, #56CCF2);
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #FFFFFF;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-bottom: 8px;
+            color: #FFFFFF;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin-bottom: 6px;
+            color: #FFFFFF;
+        }
+
+        p {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #FFFFFF;
+        }
+
+        ul {
+            font-size: 14px;
+            margin: 10px 0;
+            padding-left: 20px;
+            color: #FFFFFF;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('*');
+
+            elements.forEach(element => {
+                if (!element.matches('body, div, html')) {
+                    element.addEventListener('mouseenter', () => {
+                        element.classList.add('highlight');
+                    });
+
+                    element.addEventListener('mouseleave', () => {
+                        element.classList.remove('highlight');
+                    });
+                }
+            });
+            const header = document.querySelector('.fixed-header');
+            let isScrolledToTop = true;
+
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const threshold = 100;
+
+                if (scrollTop > threshold && isScrolledToTop) {
+                    header.classList.add('slide-up');
+                    isScrolledToTop = false;
+                } else if (scrollTop <= threshold && !isScrolledToTop) {
+                    header.classList.remove('slide-up');
+                    isScrolledToTop = true;
+                }
+            });
+        });
+    </script>
+</head>
+    <h1 class="fixed-header">Carbon Footprint Chatbot</h1>
+    <body>
+    <div class="container">
+
+    <h2>1. Product Scope</h2>
+
+    <h3>1.1 Benefits, Objectives, and Goals</h3>
+    <ul>
+        <li><strong>Benefits:</strong> The Carbon Footprint Chatbot aims to provide users with information and guidance on reducing their carbon footprints, helping them make more environmentally conscious choices.</li>
+        <li><strong>Objectives:</strong> The objectives of the chatbot are to educate users about carbon footprints, answer their questions, and provide insights and suggestions on how to minimize their impact on the environment.</li>
+        <li><strong>Goals:</strong> The goals of the chatbot are to increase awareness about carbon footprints, empower users to take actions to reduce their carbon emissions, and promote sustainable lifestyles.</li>
+    </ul>
+
+    <h3>1.2 Product Value</h3>
+    <p>Users will find value in the Carbon Footprint Chatbot by:</p>
+    <ul>
+        <li>Getting personalized information and guidance on reducing their carbon footprints.</li>
+        <li>Having their questions about carbon footprints answered in a timely and informative manner.</li>
+        <li>Gaining insights and suggestions on how to make environmentally conscious choices in their daily lives.</li>
+    </ul>
+
+    <h3>1.3 Intended Audience</h3>
+    <p>The Carbon Footprint Chatbot is intended to serve individuals who are interested in understanding and minimizing their carbon footprints. This includes environmentally conscious individuals, sustainability enthusiasts, students, researchers, and anyone seeking information and guidance on reducing their environmental impact.</p>
+
+    <h3>1.4 Intended Use</h3>
+    <p>The intended audience can use the Carbon Footprint Chatbot by:</p>
+    <ul>
+        <li>Interacting with the chatbot through a user-friendly interface.</li>
+        <li>Asking questions about carbon footprints, sustainable practices, and reducing environmental impact.</li>
+        <li>Receiving informative and personalized responses to their queries.</li>
+        <li>Exploring various topics related to carbon footprints and sustainability.</li>
+    </ul>
+
+    <h3>1.5 General Description</h3>
+    <p>The Carbon Footprint Chatbot is a software application that performs the following functions and includes the following features:</p>
+    <ul>
+        <li>Keyword Matching: The chatbot uses a keyword matching algorithm to analyze user input and identify relevant keywords.</li>
+        <li>Response Generation: Based on the identified keywords, the chatbot generates appropriate responses with information, suggestions, and insights on reducing carbon footprints.</li>
+        <li>Data Source: The chatbot retrieves information from a JSON dataset containing responses and keywords related to carbon footprints.</li>
+        <li>User-Friendly Interface: The chatbot provides a user-friendly interface where users can input their questions or statements and receive responses in a conversational manner.</li>
+    </ul>
+
+    <h2>2. Functional Requirements</h2>
+
+    <h3>Design Requirements</h3>
+    <ul>
+        <li>The chatbot should have a clean and intuitive design, making it easy for users to interact with.</li>
+        <li>The user interface should provide clear instructions on how to use the chatbot effectively.</li>
+    </ul>
+
+    <h3>Graphics Requirements</h3>
+    <ul>
+        <li>The chatbot may incorporate graphical elements such as icons or images to enhance the user experience.</li>
+        <li>Graphics should be relevant and support the content being displayed.</li>
+    </ul>
+
+    <h3>Operating System Requirements</h3>
+    <ul>
+        <li>The chatbot should be compatible with the operating systems commonly used by the target audience, such as Windows, macOS, and Linux.</li>
+        <li>It should be accessible through web browsers or standalone applications.</li>
+    </ul>
+
+    <h3>Constraints</h3>
+    <ul>
+        <li>The chatbot's functionality relies on the accuracy and comprehensiveness of the data provided in the JSON dataset.</li>
+        <li>The chatbot's responses should be generated within a reasonable time frame to provide a smooth user experience.</li>
+        <li>The chatbot should handle common user input errors and provide appropriate error messages or suggestions for correction.</li>
+    </ul>
+    </div>
+</body>
+</html>
