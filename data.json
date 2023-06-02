@@ -3398,7 +3398,7 @@
             "social media",
             "usage"
         ],
-        "response": "To have a greener social media usage, consider the following tips: 1. Optimize device settings to reduce energy consumption. 2. Use energy-efficient devices and chargers. 3. Reduce data usage by minimizing video streaming. 4. Unsubscribe from unnecessary emails and notifications. 5. Share content from eco-friendly sources and organizations. 6. Encourage digital sharing instead of printing. 7. Offset your digital carbon footprint by supporting carbon offset projects. By adopting these practices, you can minimize your environmental impact while staying connected online."
+        "response": "To have a greener social media usage, consider the following tips: \n\n1. Optimize device settings to reduce energy consumption. \n2. Use energy-efficient devices and chargers. \n3. Reduce data usage by minimizing video streaming. \n4. Unsubscribe from unnecessary emails and notifications. \n5. Share content from eco-friendly sources and organizations. \n6. Encourage digital sharing instead of printing. \n7. Offset your digital carbon footprint by supporting carbon offset projects. \n\nBy adopting these practices, you can minimize your environmental impact while staying connected online."
     },
     {
         "type": "question",
@@ -5492,7 +5492,8 @@
             "how are you doing",
             "whats up"
         ],
-        "response": "I'm feeling great, thank you! I'm always excited to assist individuals like yourself in making a positive impact on the environment. How may I be of help in reducing your carbon footprint?"    },
+        "response": "I'm feeling great, thank you! I'm always excited to assist individuals like yourself in making a positive impact on the environment. How may I be of help in reducing your carbon footprint?"
+    },
     {
         "type": "greetings",
         "keywords": [
@@ -7342,5 +7343,15 @@
             "air pollution"
         ],
         "response": "Air pollution refers to the presence of harmful substances in the air that can adversely affect the environment, human health, and other living organisms. These substances, known as pollutants, can be in the form of gases, particles, or biological materials. Common air pollutants include carbon monoxide, sulfur dioxide, nitrogen oxides, particulate matter, volatile organic compounds, and ozone."
+    },
+    {
+        "type": "question",
+        "keywords": [
+            "lets play",
+            "do you want to play",
+            "lets play a game",
+            "play game"
+        ],
+        "response": "I'm down! Specially if it is about saving our environment."
     }
 ]
