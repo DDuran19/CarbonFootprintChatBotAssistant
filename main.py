@@ -2,6 +2,7 @@
 import json
 import pyttsx3
 import time
+from datetime import datetime
 from carbonfootprint import get_response
 from tkinter import *
 from tkinter.filedialog import asksaveasfilename
@@ -165,7 +166,9 @@ class ChatInterface(Frame):
 
 
     def save_chat(self):
-        file_path = asksaveasfilename()
+        current_time = datetime.now().strftime("%m-%d-%Y_%H-%M-%S")
+        default_filename = f"Chatbot_history_{current_time}.txt"
+        file_path = asksaveasfilename(defaultextension=".txt",initialfile=default_filename)
         if file_path:
             chat_history = self.text_box.get("1.0", "end-1c")
             try:
@@ -245,7 +248,7 @@ class ChatInterface(Frame):
             messagebox.showerror("Error", "Please acknowledge the terms before proceeding.")
 
 
-    def send_message_insert(self, message):
+    def send_message_insert(self, event):
         user_input = self.entry_field.get()
         human_prompt = "Human: " + user_input + "\n"
         self.text_box.configure(state=NORMAL)
@@ -261,17 +264,6 @@ class ChatInterface(Frame):
         self.text_box.see(END)
         self.last_sent_label(str(time.strftime("Last message sent: " + '%B %d, %Y' + ' at ' + '%I:%M %p')))
         self.entry_field.delete(0, END)
-        # try:
-        #     if self.speaker_thread and self.speaker_thread.is_alive():
-        #         self.speaker_thread.speaker.endLoop()
-        #         self.speaker_thread.speaker.stop()
-        #         self.speaker_thread.join()
-                
-
-        #     self.speaker_thread = threading.Thread(target=self.playresponse, args=(response,),daemon=True)
-        #     self.speaker_thread.start()
-        # except RuntimeError:
-        #     pass
         self.thread_handler(response)
         return response
 
