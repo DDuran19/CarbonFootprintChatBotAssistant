@@ -10,7 +10,7 @@ The Carbon Footprint Chatbot is a Python-based chatbot that provides information
 
 1. Clone the repository:
 
-    ```git clone https://github.com/your_username/your_repository.git](https://github.com/DDuran19/CarbonFootprintChatBotAssistant```
+    ```git clone https://github.com/DDuran19/CarbonFootprintChatBotAssistant```
 2. Install the required dependencies:
 
     ```pip install pandas numpy```
